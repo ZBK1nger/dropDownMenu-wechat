@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "dropdownmenu": "/component/dropdownmenu/dropdownmenu"
+  }
+}

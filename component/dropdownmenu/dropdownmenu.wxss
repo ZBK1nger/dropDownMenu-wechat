@@ -212,8 +212,6 @@
   flex-wrap: wrap;
 }
 
-
-
 .sortitem {
   border-bottom: solid #f7f7f7 1rpx;
   justify-content: space-between;

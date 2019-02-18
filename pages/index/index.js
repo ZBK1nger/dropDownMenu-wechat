@@ -1,10 +1,9 @@
-
+// pages/index/menu.js
 const app = getApp()
 Page({
   data: {
-    dropDownMenuTitle: ['区域', '来源', '租售', '筛选'],
-    dropDownMenuFourthData: [{ id: 1, title: '智能排序' }, { id: 2, title: '发布时间' }, { id: 3, title: '距离优先' }],//排序数据
-    dropDownMenuFirstData: [
+    dropDownMenuTitle: ['区域', '来源', '租售', '排序'],
+    data1: [
       {
         id: 0, title: '不限',
       },
@@ -27,12 +26,15 @@ Page({
           { id: '3-2', title: '市政府' }]
       }
     ],
-    dropDownMenuSecondData: [
+    data2: [
       { id: 1, title: '个人房源' },
       { id: 2, title: '经纪人房源' }],
-    dropDownMenuThirdData: [
+    data3: [
       { id: 1, title: '出租' },
-      { id: 2, title: '出售' }]
+      { id: 2, title: '出售' }],
+    data4: [
+      { id: 1, title: '智能排序' }, { id: 2, title: '发布时间' }, { id: 3, title: '距离优先' }
+      ],
   },
   onLoad: function () {
 
@@ -44,6 +46,10 @@ Page({
 
   },
   selectedItem: function (e) {
-    console.log("选中的id：" + e.detail.selectedId + "；选中的内容：" + e.detail.selectedTitle);
+    console.log('id --' + e.detail.selectedId + "cityname = " + e.detail.selectedTitle);
   },
+  showDialog: function (e) {
+
+  },
+ 
 })

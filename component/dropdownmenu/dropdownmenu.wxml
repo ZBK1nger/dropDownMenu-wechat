@@ -1,23 +1,29 @@
 <view class="nav">
-  <view class="nav-child {{district_open? 'active' : ''}}" bindtap="tapDistrictNav" data-nav="1">
-    <view class="nav-title">{{district_right_select_name.length > 0 ?district_right_select_name : dropDownMenuTitle[0]}}</view>
-    <view class="icon"></view>
-  </view>
-  <view class="nav-child borders {{source_open? 'active' : ''}}" bindtap="tapSourceNav" data-nav="2">
-    <view class="nav-title">{{selected_source_name.length > 0 ?selected_source_name : dropDownMenuTitle[1]}}</view>
-    <view class="icon"></view>
-  </view>
-  <view class="nav-child borders-right {{style_open? 'active' : ''}}" bindtap="tapStyleNav" data-nav="3">
-    <view class="nav-title">{{selected_style_name.length > 0 ?selected_style_name : dropDownMenuTitle[2]}}</view>
-    <view class="icon"></view>
-  </view>
-  <view class="nav-child {{filter_open ? 'active' : ''}}" bindtap="tapFilterNav" data-nav="4">
-    <view class="nav-title">{{selected_filter_name.length > 0 ?selected_filter_name : dropDownMenuTitle[3]}}</view>
-    <view class="icon"></view>
-  </view>
+  <block wx:if='{{dropDownMenuDistrictData.length > 0}}'>
+    <view class="nav-child {{district_open? 'active' : ''}}" bindtap="tapDistrictNav" data-nav="1">
+      <view class="nav-title">{{district_right_select_name.length > 0 ?district_right_select_name : dropDownMenuTitle[0]}}</view>
+      <view class="icon"></view>
+    </view>
+  </block>
+  <block wx:if='{{dropDownMenuSourceData.length > 0}}'>
+    <view class="nav-child borders {{source_open? 'active' : ''}}" bindtap="tapSourceNav" data-nav="2">
+      <view class="nav-title">{{selected_source_name.length > 0 ?selected_source_name : dropDownMenuTitle[1]}}</view>
+      <view class="icon"></view>
+    </view>
+  </block>
+  <block wx:if='{{dropDownMenuStyleData.length > 0}}'>
+    <view class="nav-child borders-right {{style_open? 'active' : ''}}" bindtap="tapStyleNav" data-nav="3">
+      <view class="nav-title">{{selected_style_name.length > 0 ?selected_style_name : dropDownMenuTitle[2]}}</view>
+      <view class="icon"></view>
+    </view>
+  </block>
+  <block wx:if='{{dropDownMenuFilterData.length > 0}}'>
+    <view class="nav-child {{filter_open ? 'active' : ''}}" bindtap="tapFilterNav" data-nav="4">
+      <view class="nav-title">{{selected_filter_name.length > 0 ?selected_filter_name : dropDownMenuTitle[3]}}</view>
+      <view class="icon"></view>
+    </view>
+  </block>
 </view>
-
-
 
 <view class="district {{district_open ? 'show' : 'disappear'}} ">
   <view class="half half-left">

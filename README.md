@@ -9,8 +9,23 @@
 ![img](https://github.com/ZBK1nger/dropDownMenu-wechat/blob/master/source/Feb-16-2019%2000-49-26.gif)
 
 #### 使用
+##### 具体使用方式参照
+* 支持动态修改Navgation上的Item数量和显示隐藏等
+
+~~~
+/*
+dropDownMenuTitle:导航标题数组，按顺序填写
+dropDownMenuDistrictData:区域数组
+--- 以下三种样式一样，按需求添加即可 ---
+dropDownMenuSourceData:来源
+dropDownMenuStyleData:租售
+dropDownMenuFilterData:排序
+*/
+<dropdownmenu dropDownMenuTitle='{{dropDownMenuTitle}}' dropDownMenuDistrictData='{{dropDownMenuFirstData}}' dropDownMenuSourceData='{{dropDownMenuSecondData}}' dropDownMenuStyleData='{{dropDownMenuThirdData}}' dropDownMenuFilterData='{{dropDownMenuFourthData}}'
+  bind:selectedItem='selectedItem' />
+~~~
 * 将项目中component文件夹拖入项目中
-* 在将要使用的该组件的.json文件中引入，例如：
+* 在将要使用的该组件的.json文件中引入
 
 ~~~
 
@@ -21,12 +36,4 @@
 }
 
 ~~~
-* 在.wxml文件中引用
-
-~~~
-
-<dropdownmenu dropDownMenuTitle='{{dropDownMenuTitle}}' dropDownMenuDistrictData='{{dropDownMenuFirstData}}' dropDownMenuSourceData='{{dropDownMenuSecondData}}' dropDownMenuStyleData='{{dropDownMenuThirdData}}' dropDownMenuFilterData='{{dropDownMenuFourthData}}'
-  bind:selectedItem='selectedItem' />
-  
-~~~
-* 如调用接口返回JSON格式不统一，亦或是导航上item种类数量不符合要求，请自行修改
+* 在.wxml文件中引用即可

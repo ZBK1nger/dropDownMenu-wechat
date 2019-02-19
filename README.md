@@ -4,12 +4,12 @@
 #### 微信小程序下拉菜单自定义组件
 
 * 级联选择器，例如xx区-xx街道
-* 下拉列表，例如排序，从多到少，从小到大
+* 下拉列表，例如排序，筛选等
 
 ![img](https://github.com/ZBK1nger/dropDownMenu-wechat/blob/master/source/Feb-16-2019%2000-49-26.gif)
 
-#### 使用
-##### 具体使用方式参照
+#### 如何使用
+
 * 支持动态修改Navgation上的Item数量和显示隐藏等
 
 ~~~
@@ -37,3 +37,5 @@ dropDownMenuFilterData:排序
 
 ~~~
 * 在.wxml文件中引用即可
+
+##### 详情代码以及使用参照示例，如果对你有所帮助的请给个Star✨~

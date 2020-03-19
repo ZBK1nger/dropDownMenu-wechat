@@ -1,5 +1,6 @@
 {
   "usingComponents": {
     "dropdownmenu": "/component/dropdownmenu/dropdownmenu"
-  }
+  },
+  "navigationBarTitleText": "dropDownMenu"
 }
